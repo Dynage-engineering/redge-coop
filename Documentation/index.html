@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ViserBank - Digital Banking System</title>
+  <!-- favicon -->
+  <link rel="icon" href="assets/images/favicon.png" sizes="16x16" type="image/png" />
+  <!-- bootstrap 5  -->
+  <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+  <!-- fontawesome 5  -->
+  <link rel="stylesheet" href="assets/css/lib/font-awesome.css" />
+  <!-- lineawesome font -->
+  <link rel="stylesheet" href="assets/css/lib/line-awesome.css" />
+  <!-- Simplebar Js  -->
+  <link rel="stylesheet" href="assets/css/lib/simplebar.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#docNav" data-bs-offset="50">
+
+
+  <header class="mobile-header">
+    <div class="container">
+      <div class="row g-4 align-items-center justify-content-between">
+        <div class="col-6">
+          <!-- Logo  -->
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+          </a>
+          <!-- Logo End -->
+        </div>
+        <div class="col-6">
+          <div class="text-end">
+            <button type="button" class="btn btn--sqr sidebar-toggler">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="doc">
+    <div class="doc__sidebar" id="docNav">
+      <div class="doc-logo">
+        <!-- Logo  -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+        </a>
+        <!-- Logo End -->
+      </div>
+      <nav class="doc-nav" data-simplebar>
+        <ul class="list doc-nav__list">
+          <li>
+            <a href="#introduction" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="lar la-clone"></i> <span
+                  class="d-block">introduction</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-req" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-server"></i> <span class="d-block">server
+                  requirements</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-faq" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-question"></i> <span
+                  class="d-block">server FAQ</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#installation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-cog"></i> <span class="d-block">how to
+                  install </span></span> </a>
+          </li>
+          <li>
+            <a href="#activation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-check-circle"></i> <span
+                  class="d-block">how to activate </span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#folder" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-folder"></i> <span class="d-block">
+                  folder structure
+                </span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#admin-dashboard" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-home"></i>
+                <span class="d-block">
+                  admin dahshboard
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-users" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-users"></i>
+                <span class="d-block">Manage Users</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#deposits" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-money-bill"></i>
+                <span class="d-block">
+                  Deposits
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#withdrawals" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-hand-holding-usd"></i>
+                <span class="d-block">
+                  Withdrawals
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#money-transfers" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-random"></i>
+                <span class="d-block">
+                  Money Transfers
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#other-banks" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-bank"></i>
+                <span class="d-block">
+                  Other Banks
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#wire-transfer" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-comment-dollar"></i>
+                <span class="d-block">
+                  Wire Transfers
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-branches" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-project-diagram"></i>
+                <span class="d-block">
+                  Manage Branches
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#plans" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-chart-bar"></i>
+                <span class="d-block">
+                  Plans
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#fdr" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-money-bill"></i>
+                <span class="d-block">
+                  FDR
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#dps" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-box"></i>
+                <span class="d-block">
+                  DPS
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#loan" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-hand-holding-usd"></i>
+                <span class="d-block">
+                  Loan
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#payment-gateways" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-credit-card"></i>
+                <span class="d-block">
+                  Payment Gateways
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#support-tickets" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-ticket-alt"></i>
+                <span class="d-block">
+                  Support Ticket
+                </span>
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#reports" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-th-list"></i>
+                <span class="d-block">
+                  Report
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#subscribers" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-thumbs-up"></i>
+                <span class="d-block">
+                  Subscribers
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#genearal-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-life-ring"></i>
+                <span class="d-block">
+                  general setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#logo-favicon" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-images"></i>
+                <span class="d-block">
+                  Logo & Favicon
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#system-config" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-cog"></i>
+                <span class="d-block">
+                  System configuration
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#kyc-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-user-check"></i>
+                <span class="d-block">
+                  KYC Setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#referral-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-sitemap"></i>
+                <span class="d-block">
+                  Referral Setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#extensions" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-cogs"></i>
+                <span class="d-block">
+                  extensions
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#language-manager" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-language"></i>
+                <span class="d-block">
+                  language manager
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#seo-manager" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-globe-asia"></i>
+                <span class="d-block">
+                  seo manager
+                </span>
+              </span>
+            </a>
+          </li>
+
+
+
+          <li>
+            <a href="#notification-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-bell"></i>
+                <span class="d-block">
+                  Notification Setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-pages" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-list"></i>
+                <span class="d-block">
+                  Manage Pages
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-section" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-html5"></i>
+                <span class="d-block">
+                  Manage Section
+                </span>
+              </span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <div class="copyright">
+        <p class="m-0 text--white px-3 text-center">Copyright © <a href="https://viserlab.com/"
+            class="t-link t-link--canvas">ViserLab</a> 2022</p>
+      </div>
+    </div>
+    <div class="doc__body">
+      <div id="introduction" class="section--sm section--first">
+        <div class="list">
+          <div class="doc-head">
+            <div class="doc-head__content">
+              <h5 class="doc-head__title">ViserBank</h5>
+              <span class="doc-head__sub-title">
+                Digital Banking System
+              </span>
+            </div>
+          </div>
+          <div class="doc-body">
+            <ul class="list" style="--gap: 0.2rem">
+              <li><strong>Created :</strong> 2022-12-05</li>
+              <li>
+                <strong>By :</strong>
+                <a href="https://codecanyon.net/user/viserlab" class="t-link">Viserlab</a>
+              </li>
+              <li><strong>Email :</strong> <a class="t-link" href="mailto:support@viserlab.com">support@viserlab.com</a>
+              </li>
+            </ul>
+
+            <p class="mt-4 lg-text mb-1">
+              <strong>ViserBank</strong> is a digital banking software that comes with PHP Laravel. It’s developed for
+              those people who want to start their Digital Banking Business.
+            </p>
+
+            <h5 class="mt-3">Key Features</h5>
+            <ul>
+              <li>Branch Management</li>
+              <li>Deposit Money</li>
+              <li>Withdraw Money</li>
+              <li>Bank Transfer</li>
+              <li>Wire Transfer</li>
+              <li>Beneficiary Management</li>
+              <li>Staff Management</li>
+              <li>Stock Adjustment System</li>
+              <li>FDR Schemes Management</li>
+              <li>DPS Schemes Management</li>
+              <li>Loan Management</li>
+              <li>Multilevel Referral System</li>
+            </ul>
+
+            <p class="mt-4 lg-text">
+              The documentation will help to understand the total system and we have tried to summarize the total.
+            </p>
+            <blockquote class="blockquote text--accent">
+              If needed, we will update this script continuously and come with new features and security patches. We
+              will try to give the best user experience to all of our clients.
+            </blockquote>
+            <p class="mt-4 lg-text">
+              Thank you for purchasing <strong>ViserBank</strong>. If you have any questions or queries that are not
+              answered in this document, please feel free to contact us via email. We will try to respond to you as soon
+              as possible. Thank you so much.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="server-req" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server Requirements</h5>
+                  <span class="doc-head__sub-title">
+                    All server requirements are stated bellow
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-4">
+                  <div class="doc-body">
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>PHP Version 8.1</li>
+                      <li>MySQL Version 5.7+ or MariaDB version 10.2+</li>
+                      <li>BCMath PHP Extension</li>
+                      <li>Ctype PHP Extension</li>
+                      <li>cURL PHP Extension</li>
+                      <li>DOM PHP Extension</li>
+                      <li>Fileinfo PHP Extension</li>
+                      <li>GD PHP Extension</li>
+                      <li>JSON PHP Extension</li>
+                      <li>Mbstring PHP Extension</li>
+                      <li>OpenSSL PHP Extension</li>
+                      <li>PCRE PHP Extension</li>
+                      <li>PDO PHP Extension</li>
+                      <li>pdo_mysql PHP Extension</li>
+                      <li>Tokenizer PHP Extension</li>
+                      <li>XML PHP Extension</li>
+                      <li>allow_url_fopen()</li>
+                      <li>file_get_contents()</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-8">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/server.png" alt="image" class="img-fluid w-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="server-faq" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server FAQ</h5>
+                  <span class="doc-head__sub-title">
+                    Frequently Asked Questions About Server
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do I need VPS or a Dedicated server to run this system?
+                    </p>
+                    <p class="m-0">
+                      No, You can run this system in a shared host as well and it will run smoothly. But if you have
+                      much traffic, you may need to upgrade your server/hosting. Our codes are highly optimized to
+                      ensure the best possible performance.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Which hosting provider should I choose for this? Do you have any suggestions?
+                    </p>
+                    <p class="m-0">
+                      You can choose any hosting provider that provides cPanel-based hosting. cPanel is not a must, but
+                      we recommend you to have cPanel-based hosting.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      I don't have cPanel, What should I do?
+                    </p>
+                    <p class="m-0">
+                      Nothing to worry about, Our system will work with any control panel but cPanel is easy to manage,
+                      for that we recommend cPanel-based hosting. Also, Our free Support is limited to cPanel-based
+                      hosting only.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do you provide hosting as well?
+                    </p>
+                    <p class="m-0">
+                      Yes, We do. We can provide a complete solution for your hosting. We can provide <a class="t-link"
+                        href="https://viserlab.com/hosting/budget" target="_blank">budget shared hosting</a>, <a
+                        class="t-link" href="https://viserlab.com/hosting/premium" target="_blank">premium shared
+                        hosting</a>, <a class="t-link" href="https://viserlab.com/hosting/vps" target="_blank">VPS</a>,
+                      <a class="t-link" href="https://viserlab.com/hosting/dedicated" target="_blank">Dedicated
+                        servers</a>, and Cluster from various geolocation. Please contact us for more details.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="installation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Installation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Installation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-6">
+                  <div class="doc-body">
+                    <p class="lead">
+                      Installation is very easy with our Easy Installer. You can install yourself simply in few steps
+                      without any coding knowledge. We develop our installation system to make the installation process
+                      flawless and easy.
+                    </p>
+                    <p class="xl-text fw-md">Installation Steps:</p>
+                    <ul class="list list--base">
+                      <li>
+                        <p class="m-0">
+                          Upload the whole file to the server you have downloaded from download after purchase.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          Extract/Unzip the file and move all files in the <code>Files</code> folder to the main
+                          folder(where you want to install it). Make sure you have moved the <code>index.php</code> and
+                          <code>.htaccess</code> as well.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">Now please browse http://<code>your-site-url</code>/install/index.php and follow
+                          the process. Your system should be ready to use.
+                        </p>
+                      </li>
+                    </ul>
+
+                    <p class="xl-text mt-4">
+                      If you are still unable to install the system, please contact us. we offer free installation in
+                      cPanel-based hosting.
+                    </p>
+                    <p class="xl-text fw-md mb-2">Admin Login:</p>
+                    <ul class="list" style="--gap: 0.2rem">
+                      <li>
+                        <span class="d-block">Admin login URL is:
+                          <strong>
+                            http://<code>your-site-url</code>/admin</strong>
+                        </span>
+                      </li>
+                      <li>
+                        <strong>Username :</strong> [as_you_set_on_installation]
+                      </li>
+                      <li>
+                        <strong>Password :</strong> [as_you_set_on_installation]
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/installation.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="activation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Activation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Activation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row g-4">
+            <div class="col-xl-6">
+              <div class="doc-body h-auto">
+                <p>
+                  After installing the system you need to activate it. When you visit the system, you will be able to
+                  see the activation page. Just provide this information to activate and run your system. Your provided
+                  information will send to ViserLab server to verify and we never collect any sensitive or confidential
+                  data.
+                </p>
+                <ul class="list list--base" style="--gap: 0.5rem">
+                  <li>
+                    <p class="m-0">
+                      <strong>Purchase Code:</strong> To get purchase code <a
+                        href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-"
+                        target="_blank">Click Here</a>.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Envato Username:</strong> Your Envato username with which you bought system.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Email:</strong> Provide your email for further communication.
+                    </p>
+                  </li>
+                </ul>
+                <p class="mt-5">
+                  <code>The purchase code(license) is for one website or domain only. Please activate the license into the correct domain(URL) to avoid any unwanted issues in the future.</code>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="doc-body--alt t-center">
+                <img src="assets/images/activation.jpg" alt="image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="folder" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Folder Structure</h5>
+                  <span class="doc-head__sub-title">
+                    Application Folder Details
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="doc-body">
+                <p class="lead">
+                  After installation, There will be two folders and two files will be in your main folder.
+                </p>
+                <ul class="list" style="--gap: 0.3rem">
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">assets</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">core</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">.htaccess</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">index.php</span>
+                    </span>
+                  </li>
+                </ul>
+                <ul class="list list--base mt-4">
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"assets" </strong> folder, We keep all
+                      kinds of assets like <strong>CSS, JS, Images</strong>. If
+                      you want To edit or change anything over CSS or js, please
+                      have a look at this folder.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"core"</strong> folder, We keep the core of
+                      Laravel and we maintain full MVC structure on this
+                      project.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="admin-dashboard" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Admin Dashboard</h5>
+                  <span class="doc-head__sub-title"> Dashboard Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+
+                    <p>
+                      From the <strong>Dashboard</strong> menu, you will get an overview at a glance. You may know about
+                      the users' info, pending & rejected deposits, pending and rejected withdrawals, loan info, FDR
+                      info, and DPS info. Also, you may see the deposit & withdrawal report in the chart.
+                    </p>
+
+                    <p>
+                      You'll see a popup window here about the cron-job instruction. You need to configure cron job
+                      commands given on that window on your server to automate the payment process of FDR, DPS & loan
+                      installment.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/dashboard.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-users" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Manage Users</h5>
+                  <span class="doc-head__sub-title"> Mange Users Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Users refer to the account holder of your bank. Users may get registered online or offline from a
+                      branch. Users are able to do deposits, withdraw, open DPS, open FDR, apply for loans, and transfer
+                      money after login into their dashboard.
+                    </p>
+
+                    <p>
+                      From the Manage User menu, you can see the users list of Active Users, Banned Users, Email
+                      Unverified Users, Mobile Unverified Users, KYC Unverified Users, and KYC Pending Users. You can
+                      manage your users like update their information, notifying them, viewing their login history, and
+                      banning them from the system from their details page. Also, you can send notifications to all
+                      users or to a specific user.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_users.png" alt="image" class="img-fluid">
+                  </div>
+                </div>
+
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      On the user details page you can get an Overview of the user info like balance, deposited amount,
+                      withdrawn amount, transferred amount, how many opened, how many DPS opened, how many loans, and
+                      how many beneficiaries added.
+                    </p>
+
+                    <p>
+                      Admin is able to update the user information and can add/subtract balance, view login history, ban
+                      the users from this details page, and see the documents submitted by the user for KYC
+                      verification.
+                    </p>
+
+                    <p>
+                      <b>Email Verification: </b> If email verification is unverified then a
+                      verification
+                      code will be sent to the user's email if he/she tries to log in and need to be verified by that
+                      code.
+
+                      <br>
+                      <br>
+
+                      <b>Mobile Verification: </b> If mobile verification is unverified then a verification
+                      code will be sent to the user's mobile if he/she tries to login and need to be verified by that
+                      code.
+
+                      <br>
+                      <br>
+
+                      <b>2FA Verification: </b> This will be enabled if the user enables the 2FA security from their
+                      user panel. If this is enabled the user needs to verify the code from his google authentication
+                      app to get access to his user panel.
+
+                      <br>
+                      <br>
+
+                      <b>KYC: </b> If KYC is unverified, the user needs to submit the information configured from the
+                      <em class="text-primary fw-bold">KYC Setting</em>.
+
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/user_details.png" alt="image" class="img-fluid">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="deposits" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Deposits</h5>
+                  <span class="doc-head__sub-title">Deposits Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Deposits</b> menu, the admin can see the deposit history and details. If a deposit is
+                      done by
+                      a manual payment gateway, then its status will be pending at first. Admin can approve or reject
+                      the pending deposits from the details page.
+                    </p>
+
+                    <p>
+                      Admin is able to filter the deposit history by branch, date, date to date, and username or
+                      transaction number.
+                    </p>
+
+                    <p>
+                      From the search field, the admin can search the deposit data by <b>Transaction Number</b> or
+                      <b>username</b> of the user.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/deposits.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="withdrawals" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Withdrawals</h5>
+                  <span class="doc-head__sub-title">Withdrawals Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Withdrawals</b> menu, the admin can see the Withdrawal history and details. As our
+                      withdrawal procedure is manual, Admin can approve or reject the pending withdrawals from the
+                      details page.
+                    </p>
+
+                    <p>
+                      Admin is able to filter the withdrawal history by branch, date, date to date, and username or
+                      transaction number.
+                    </p>
+
+                    <p>
+                      From the search field, the admin can search the withdrawal data by <b>Transaction Number</b> or
+                      <b>username</b> of the user.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/withdrawals.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="money-transfers" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Money Transfers</h5>
+                  <span class="doc-head__sub-title">Money Transfers Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Money Transfers</b> menu, the admin can see the Transfer history and details. Admin
+                      can approve or reject the pending transfers from the details page.
+                    </p>
+
+                    <p>
+                      From the search field, the admin can search the transfer data by <b>Transaction Number</b> or
+                      <b>username</b> of the sender.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/transfers.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="other-banks" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Other Banks</h5>
+                  <span class="doc-head__sub-title">Other Banks Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Other Banks</b> menu, the admin can see the list of other banks and add new banks or
+                      update from the list. Admin
+                      can approve or reject the pending transfers from the details page.
+                    </p>
+
+                    <p>
+                      From the search field, the admin can search a bank by its name.
+                    </p>
+
+                    <p>
+                      Admin can add new bank by clicking on the <b>Add New</b> button, and may update a bank details by
+                      clicking on the <b>Edit</b> button.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/other_banks.png" alt="image" class="img-fluid" /> <br>
+                    <img src="assets/images/other_banks_add.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div id="wire-transfer" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Wire Transfer</h5>
+                  <span class="doc-head__sub-title">Wire Transfer Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Wire Transfer > Setting</h6>
+
+                    <div>
+                      <p class="mb-2">
+                        Admin can configure the wire transfer limit and charges here.
+                      </p>
+                      <div class="mb-2">
+                        <span class="fw-bold">Transfer Limit</span>: Limit for each individual transfer.
+                      </div>
+
+                      <div class="mb-2">
+                        <span class="fw-bold">Transfer Charge</span>: Charge for each individual transfer.
+                      </div>
+
+                      <div class="mb-2">
+                        <span class="fw-bold">Daily Limit</span>:
+                        <br> &nbsp; &nbsp;
+                        The <b>Maximum Amount</b> is the value of how much amount can be transferred in a day.
+                        <br> &nbsp; &nbsp;
+                        The <b>maximum count</b> is the value of how many times user can transfer money in a day.
+                      </div>
+
+                      <div class="mb-2">
+                        <span class="fw-bold">Monthly Limit</span>:
+                        <br> &nbsp; &nbsp;
+                        The <b>Maximum Amount</b> is the value of how much amount can be transferred in a month.
+                        <br> &nbsp; &nbsp;
+                        The <b>maximum count</b> is the value of how many times user can transfer money in a month.
+                      </div>
+
+                      <div class="mb-2">
+                        <span class="fw-bold">Instruction</span>: This instruction will be displayed when the user will
+                        transfer money using Wire-Transfer.
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/wire_transfer_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Wire Transfer > Form</h6>
+
+                    <div>
+                      <p class="mb-2">
+                        Admin can set up the Wire Transfer form for users from here. Users have to fill up the form for
+                        each transfer.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/wire_transfer_form.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="manage-branches" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Manage Branches</h5>
+                  <span class="doc-head__sub-title">Manage Branches Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Manage Branches > All Branches</h6>
+
+                    <div>
+                      <p>
+                        Admin can see the branch list from here. Branches also visible for anyone from the
+                        website/frontend footer menu.
+                      </p>
+
+                      <p>
+                        To add a new branch admin needs to go the Add New Branch page by clicking on the <b>Add New</b>
+                        button at the top left corner. To update a branch info admin needs to go to the details page.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/branches.png
+                    
+                    " alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Manage Branches > Branch Staff</h6>
+
+                    <div>
+                      <p class="mb-2">
+                        Admin can see the staff list and add staff for branches from here. Staff can login to the staff
+                        panel by their email and password. Password will be sent to their email after adding new staff.
+                        There are two types of staff for a branch:
+                      </p>
+
+                      <ol>
+                        <li><b>Manager</b>: A single staff can be assigned as a manager to multiple branches. The
+                          manager only can see the deposit and withdrawal list of the branches he is assigned for. The
+                          manager also can see the list of users/account holders from any branch.</li>
+
+                        <li class="mt-2">
+                          <b>Account Officer</b>:
+                          A single staff can be assigned as account officer to a single branch. The account officer only
+                          can see the deposit, withdrawal, and list of users/account opened by him/her. He/she can open
+                          new account, deposit money, withdraw money.
+                          <br>
+                          <br>
+                          <p>
+                            To deposit/withdraw money the account officer needs to find the account by account number or
+                            user name from the home page.
+                          </p>
+                        </li>
+                      </ol>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/branch_staff.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="plans" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Plans</h5>
+                  <span class="doc-head__sub-title">Plans Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-8">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the Plans menu, the admin can manage schemes for FDR, DPS, and loans. A single plan refers to
+                      a scheme.
+                    </p>
+
+                    <h6>Plans > FDR Plans</h6>
+                    <div>
+                      <p>
+                        Fixed Deposit Schemes (FDR) plans can be managed from this menu. The admin can add/edit FDR
+                        plans from here. For an FDR plan, the admin needs to submit the following information below.
+                      </p>
+
+                      <p>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Name:</span>
+                          <span>Name of the plan or scheme. [ <code>Max 40 characters</code> ]</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Interest Rate:</span>
+                          <span>The user will get the profit according to this rate in each installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Interest Interval:</span>
+                          <span>How many days in one installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Locked Days:</span>
+                          <span>The user can't withdraw the deposited money before this time period.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Minimum Amount:</span>
+                          <span>The user can not deposit less than this amount to open an FDR by this plan.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Maximum Amount:</span>
+                          <span>The user can not deposit more than this amount to open an FDR by this plan.</span>
+                        </li>
+                      </ul>
+                      <br>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="doc-body--alt">
+                    <img src="assets/images/fdr_plans.png" alt="image" class="img-fluid" />
+                    <br>
+                    <br>
+                    <br>
+                    <img src="assets/images/fdr_plan_add.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-xl-8">
+                  <div class="doc-body h-auto">
+
+                    <h6>Plans > DPS Plans</h6>
+                    <div>
+                      <p>
+                        Deposit Pension Schemes (DPS) plans can be managed from this menu. The admin can add/edit DPS
+                        plans from here. For a DPS plan, the admin needs to submit the following information below.
+                      </p>
+
+                      <p>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Name:</span>
+                          <span>Name of the plan or scheme. [ <code>Max 40 characters</code> ]</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Installment Interval:</span>
+                          <span>How many days in one installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Total Installment:</span>
+                          <span>Number of total installments to mature.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Per Installment:</span>
+                          <span>The amount user need to pay in one installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Interest Rate:</span>
+                          <span>The user will get the profit according to this rate on total deposited amount.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Charge will Apply If Delay:</span>
+                          <span>If an installment is delayed for these days, the charge will be applied.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Fixed Charge:</span>
+                          <span>This charge will be applied for each day of each delayed installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Percent Charge:</span>
+                          <span>This charge will be applied for each day of each delayed installment. The percent will
+                            be calculated on the installment amount</span>
+                        </li>
+                      </ul>
+
+                      <br>
+                      <small class="fw-bold">The summation fixed charge and percent charge will be considered as the
+                        total charge. And the summation of the delay charge of all installments will be applied to the
+                        mature amount.</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="doc-body--alt">
+                    <img src="assets/images/dps_plan.png" alt="image" class="img-fluid" />
+                    <br>
+                    <br>
+                    <br>
+                    <img src="assets/images/dps_plan_add.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-xl-8">
+                  <div class="doc-body h-auto">
+
+                    <h6>Plans > Loan Plans</h6>
+                    <div>
+                      <p>
+                        Loan plans can be managed from this menu. The admin can add/edit loan plans from here. For a
+                        loan plan, the admin needs to submit the following information below.
+                      </p>
+
+                      <p>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Name:</span>
+                          <span>Name of the plan or scheme. [ <code>Max 40 characters</code> ]</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Minimum Amount:</span>
+                          <span>The minimum loan amount user can take by this plan.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Maximum Amount:</span>
+                          <span>The maximum loan amount user can take by this plan.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Per Installment:</span>
+                          <span>The amount user need to pay in one installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Installment Interval:</span>
+                          <span>How many days in one installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Total Installments:</span>
+                          <span>Number of total installments to be paid.</span>
+                        </li>
+
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Instruction:</span>
+                          <span>The user will see this instruction while he/she applies for this plan.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Charge will Apply If Delay:</span>
+                          <span>If an installment is delayed for these days, the charge will be applied.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Fixed Charge:</span>
+                          <span>This charge will be applied for each day of each delayed installment.</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Percent Charge:</span>
+                          <span>This charge will be applied for each day of each delayed installment. The percent will
+                            be calculated on the installment amount</span>
+                        </li>
+
+                        <li class="list-group-item d-flex flex-wrap justify-content-between">
+                          <span class="fw-bold">Loan Application Form Fields:</span>
+                          <span>Admin may able to add custom fields on the loan application form as he/she wants.</span>
+                        </li>
+
+                      </ul>
+
+                      <br>
+
+                      <small class="fw-bold">The summation fixed charge and percent charge will be considered as total
+                        charge. And the user have to pay the charge with the installment amount.</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="doc-body--alt">
+                    <img src="assets/images/loan_plan.png" alt="image" class="img-fluid" />
+                    <br>
+                    <br>
+                    <br>
+                    <img src="assets/images/loan_plan_add.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="ps-5">
+                <b>N.B.: All field with an asterisk (<span class="text-danger">*</span>) is required</b>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="fdr" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">FDR</h5>
+                  <span class="doc-head__sub-title">FDR Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>FDR</b> menu, admin can see the list of fdr opened by the users.
+                    </p>
+                    <p>
+                      <span class="d-block mb-2">
+                        <b>Running FDR</b>: The list of FDRs from which users are getting installments.
+                      </span>
+                      <span class="d-block mb-2">
+                        <b>Due FDR</b>: The list of FDRs from which users are not getting installments. This may happen
+                        if the cron job commands are not executing properly on the server.
+                      </span>
+                      <span class="d-block mb-2">
+                        <b>Closed FDR</b>: This list of FDRs from which users have withdrawn the deposited amount.
+                      </span>
+
+                      <br>
+                      Admin can see the installment history from the Installments button of each fdr.
+
+                      <br><br>
+                      <b>N.B.</b> The installment amount will be added to the user's account automatically by executing
+                      a cron-job command on the server. You just need to configure the cron job command on the server.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/fdrs.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="dps" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">DPS</h5>
+                  <span class="doc-head__sub-title">DPS Overview</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>DPS</b> menu, admin can see the list of DPS opened by the users.
+                    </p>
+
+                    <p>
+                      <span class="d-block mb-2">
+                        <b>Running DPS</b>: The list of DPSs from which users are paying installments.
+                      </span>
+                      <span class="d-block mb-2">
+                        <b>Due DPS</b>: The list of DPSs from which users are not paying installments. This may happen
+                        if the cron job commands are not executing properly on the server or the user doesn't have
+                        sufficient balance.
+                      </span>
+                      <span class="d-block mb-2">
+                        <b>Matured DPS</b>: The list of DPSs of which all installments have been paid.
+                      </span>
+                      <br>
+                      <br>
+                      Admin can see the installment history from the Installments button of each DPS.
+
+                      <br><br>
+                      <b>N.B.</b> The installment amount will be deducted from the user's account automatically by
+                      executing a cron-job command on the server. You just need to configure the cron job command on the
+                      server.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/fdrs.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="loan" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Loan</h5>
+                  <span class="doc-head__sub-title">Loan Overview</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Loan</b> menu, admin can see the list of loan applied by the users.
+                    </p>
+
+                    <p>
+                      <span class="d-block mb-2">
+                        <b>Pending Loans</b>: The list of Loans awaiting approval. If a user applies for a loan this
+                        will
+                        be considered a pending loan at first admin may approve or reject this application.
+                      </span>
+
+                      <span class="d-block mb-2">
+                        <b>Running Loans</b>: The list of loans that admin approved and users are paying installments.
+                      </span>
+
+                      <span class="d-block mb-2">
+                        <b>Due Loans</b>: The list of Loans from which users are not paying installments. This may
+                        happen
+                        if the cron job commands are not executing properly on the server or the user doesn't have
+                        sufficient balance.
+                      </span>
+
+                      <span class="d-block mb-2">
+                        <b>Paid Loans</b>: The list of Loans of which all installments have been paid.
+                      </span>
+
+                      <span class="d-block mb-2">
+                        <b>Rejected Loans</b>: The list of loans that rejected by the admin.
+                      </span>
+
+                      <br>
+                      <br>
+                      Admin can see the installment history from the Installments button of each Loan.
+
+                      <br><br>
+                      <b>N.B.</b> The installment amount will be deducted from the user's account automatically by
+                      executing a cron-job command on the server. You just need to configure the cron job command on the
+                      server.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/fdrs.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="payment-gateways" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Payment Gateways</h5>
+                  <span class="doc-head__sub-title">Payment Gateways Overview</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-12">
+                  <div class="doc-body h-auto">
+                    <p>
+                      We have two types of payment gateways like <b>Automatic Gateways </b> and <b>Manual Gateways </b>.
+                    </p>
+
+                    <p>
+                      <b>Automatic Gateways</b>: We have added 25+ automatic gateways in this system. Admin just need to
+                      configure with valid credentials. If the users deposit money by automatic gateway, admin doesn't
+                      need to approve.
+                    </p>
+
+                    <p>
+                      <b>Manual Gateways</b>: Admin can add manual gateways as he/she want. If the users deposit money
+                      by automatic gateway, admin need to approve.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="support-tickets" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Support Ticket</h5>
+                  <span class="doc-head__sub-title">Support Ticket Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Support Ticket</b> menu, admin can manage all support tickets opened by the users.
+                      Admin is able to reply or close a ticket from its details page.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/support_tickets.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reports" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Report</h5>
+                  <span class="doc-head__sub-title">Report Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Report</b> menu, admin can see the Transaction Log, Login History and the Notification
+                      History.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/reports.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="subscribers" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Subscribers</h5>
+                  <span class="doc-head__sub-title">
+                    Subscribers Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Anyone can subscribe from the footer section of the website of this system. Admin can send emails
+                      to subscribers for promotional purposes or any other notices.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/subscribers.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="genearal-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">General Setting</h5>
+                  <span class="doc-head__sub-title">
+                    General Settings Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can set the basic information from the general setting.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Site Title:</strong> The name of your website.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Currency:</strong> The base currency of your system.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Currency Symbol:</strong> The symbol of the base currency.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Time Zone:</strong> Timezone of your application.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Base Color:</strong> The base color of your website/frontend.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Secondary Color:</strong> The secondary color of your website/frontend. We prefer to
+                          pick a dark color for this.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Account Number Prefix:</strong> This text will be added at the beginning of account
+                          number.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Account Number Length:</strong> Length of the account number without the prefix.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>OTP Expiration Time:</strong> Enter the value in seconds. An OTP code will be expired
+                          after that seconds.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Minimum Limit:</strong> Users can't transfer more than the minimum amount within your
+                          bank in a single transaction.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Daily Limit:</strong> The amount users can transfer within your bank on a date.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Monthly Limit:</strong> The amount users can transfer within your bank in a calendar
+                          month.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Fixed Charge:</strong> The fixed amount as a charge on your own bank transfer.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Percent Charge:</strong> The percentage of the transfer amount as a charge on your own
+                          bank transfer.
+                        </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/general_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="logo-favicon" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Logo Favicon</h5>
+                  <span class="doc-head__sub-title">
+                    Logo Favicon Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      Admin can change the logo and favicon from here.
+                    </p>
+
+                    <p>
+                      If the logo and favicon are not changed after you update from this page, please clear the cache
+                      from your browser. As we keep the filename the same after the update, it may show the old image
+                      for the cache. usually, it works after clear the cache but if you still see the old logo or
+                      favicon, it may be caused by server level or network level caching. Please clear them too.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/logo_favicon.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="system-config" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">System Configuration</h5>
+                  <span class="doc-head__sub-title">
+                    System Configuration Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the System configuration menu admin can control the settings and modules of the system like
+                      User/Account registration, Forcing users to set secure password, KYC Verification, Email
+                      Verification, Mobile Verification, SMS Notification, Email Notification, Deposit, Withdraw, FDR,
+                      DPS, Loan, Own Bank Transfer, Other Bank Transfer, OTP Via Email, Otp Via SMS, Referral System and
+                      more.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/system_configuration.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="kyc-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">KYC Setting</h5>
+                  <span class="doc-head__sub-title">
+                    KYC Setting Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      From the KYC Setting Menu admin can make the KYC form for user as he want.
+                    </p>
+
+                    <p>
+                      KYC (Know Your Client) is an important features in this system. Admin may need to verify the
+                      User/Account holder by several documents like Passport, Driving License, National Identity Card,
+                      etc. <br>
+                      Admin can add fields by clicking on the <b>Add New</b> button.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/kyc_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="referral-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Referral Setting</h5>
+                  <span class="doc-head__sub-title">
+                    Referral Setting Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      If you enable the referral system user may refer their friends or family to open an account in
+                      your bank. As the referral system is multilevel the referrers will get a referral commission when
+                      the referee account deposit money. And you can control the referral setting from here.
+                    </p>
+
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Commission Count:</strong> The times the referrers will get the referral
+                          commission.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Level Setting:</strong> Admin can set the levels as many as he wants and set up on
+                          which level how much commission wants to give to referrers. And admin is able to update the
+                          system any time.
+                        </p>
+                      </li>
+                    </ul>
+
+                    <br>
+                    <p>
+                      Admin can see the commission log from <b>Report > Transaction Log</b> menu by filtering the
+                      data by selecting <b>Remark</b> and selecting <b>Referral commission</b>
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/referral_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="extensions" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Extensions</h5>
+                  <span class="doc-head__sub-title">
+
+                    Extensions Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Extensions are some third-party plugins we have used you can configure them from here.
+                    </p>
+
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Custom Captcha:</strong> To test the human identity of the visitors a randomly
+                          generated sequence of letters and/or numbers appears as an image. This custom captcha is
+                          enabled, the captcha will appear in every form on the website and visitors need to prove their
+                          human identity by submitting the exact text in the captcha image.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Google Recaptcha 2:</strong>reCAPTCHA is a free service from Google that helps protect
+                          websites from spam and abuse. A “CAPTCHA” is a turing test to tell human and bots apart.
+
+                          <br>
+                          <br>
+                          We prefer to use Google Captcha over Custom Captcha.
+                          <br>
+                          <br>
+                          Get the Site Key and Secret Key from <a
+                            href="https://developers.google.com/recaptcha/docs/display" target="_blank">here</a>
+                          <br>
+                          <br>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Google Analytics:</strong> Google Analytics is a web analytics service that provides
+                          statistics and basic analytical tools for search engine optimization (SEO) and marketing
+                          purposes. The service is part of the Google Marketing Platform and is available for free to
+                          anyone with a Google account.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Tawk.to:</strong> <a href="https://www.tawk.to/" target="_blank">Twak To</a> is a chat
+                          tool​​ It's a powerful free web chat tool that makes it easy for customers to message you
+                          through your website.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/extensions.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="language-manager" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Language Manager</h5>
+                  <span class="doc-head__sub-title">
+
+                    Language Manager Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      As our system is multilingual, the admin can add multiple languages from here. Admin needs to add
+                      keywords in English as the system has, and needs to translate them into the language he/she wants
+                      to translate.
+                      As our system is multilingual, the admin can add multiple languages from here. Admin needs to add
+                      keywords in English as the system has, and needs to translate them into the language he/she wants
+                      to translate.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/language_manager.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-xl-6">
+                    <div class="doc-body h-auto">
+                      <h5>How to translate?</h5>
+                      <p>
+                        <b>Add Keywords:</b> Admin need to add the words/sentences as the system has. After clicking on
+                        the Add New Keyword button a pop window wll open and put the english word/sentence in the key
+                        field and add put the translated text on the value.
+                      </p>
+
+                      <p>
+                        <b>Edit Keywords:</b> Admin is able to update the translated text of a keyword.
+                      </p>
+
+                      <p>
+                        <b>Import Keywords:</b> Admin can import keywords from one language to another language. If you
+                        import keywords from another language then previous keywords and translated text will be
+                        removed.
+                      </p>
+
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="doc-body--alt t-center">
+                      <img src="assets/images/language_add_key.png" alt="image" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="seo-manager" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    SEO Manager</h5>
+                  <span class="doc-head__sub-title">
+
+                    SEO Manager Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can add seo contents from the SEO Manager menu.
+                    </p>
+
+                    <p>
+                      <b>Meta Keywords:</b> Meta keywords are meta tags that you can use to give search engines more
+                      information about a page's content. They're found in a webpage's HTML source code, and are not
+                      visible to visitors.
+                    </p>
+
+                    <p>
+                      <b>Meta Description:</b> A meta description tag generally informs and interests users with a
+                      short, relevant summary of what a particular page is about.
+                    </p>
+
+                    <p>
+                      <b>Social Title:</b> The social title is how you define your content's title.
+                    </p>
+
+                    <p>
+                      <b>Social Description:</b> This description controls how the link will be described when it shows
+                      up in
+                      someone's feed.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/seo.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="notification-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Notification Setting</h5>
+                  <span class="doc-head__sub-title">
+
+                    Notification Setting Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Notification Setting > Global Template</h6>
+                    <p>
+                      Global Template is the template for all email.
+                      From the Global Template, the admin is able to update the email template. We have provided a
+                      template as a demo.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/global_template.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Notification Setting > Email Setting</h6>
+                    <p>
+                      From the Email Setting menu, the admin can configure the email sending method. We have several
+                      email-sending methods like PHP Mail, SMTP, SendGrid API, and Mailjet API.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/email_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Notification Setting > SMS Setting</h6>
+                    <p>
+                      From the SMS Setting menu, the admin can configure the SMS sending method. We have several SMS
+                      sending methods like Clickatell, Infobip, Message Bird, Nexmo, Sms Broadcast, Twilio, Text Magic,
+                      and Custom API.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/sms_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-pages" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Manage Pages</h5>
+                  <span class="doc-head__sub-title">
+
+                    Manage Pages Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+
+                    <p>
+                      Admin can add more pages as he wants. For example, admin wants to add a new About Us page then
+                      he/she needs to provide the page name as <b>About Us</b> and the slug as <b>about-us</b>.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_pages.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+
+                    <p>
+                      Admin can add/remove sections from pages by clicking on the Edit button of that page. Admin is
+                      able to move the position of the section and set the position of a section where to be placed in
+                      the website/frontend.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_pages_section.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-section" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Manage Section</h5>
+                  <span class="doc-head__sub-title">
+
+                    Manage Section Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      All pages in the website/frontend have several sections and sections contain content like text,
+                      images, and icons. Admin is able to add/update the contents from this menu.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_pages.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery library -->
+    <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- bootstrap 5 js -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Simplebar Js  -->
+    <script src="assets/js/lib/simplebar.js"></script>
+    <!-- main js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
